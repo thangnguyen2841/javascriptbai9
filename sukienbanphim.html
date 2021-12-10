@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sự Kiện Bàn Phím</title>
+</head>
+<body onload="docReady()">
+<img id="nobita"
+     src="https://ae01.alicdn.com/kf/HTB1pmY1MpXXXXawXpXXq6xXFXXXK/Doraemon-Nobita-Nobi-Cosplay-Costume-Anime-Custom-Made-Uniform.jpg"
+     style="width: 180px; position: absolute; left: 0; top: 0; height: 200px">
+
+<script>
+    function upArrowPress() {
+        let element = document.getElementById("nobita");
+        element.style.top = parseInt(element.style.top) - 20 + "px";
+    }
+
+    function downArrowPress() {
+        let element = document.getElementById("nobita");
+        element.style.top = parseInt(element.style.top) + 20 + "px";
+    }
+
+    function leftArrowPress() {
+        let element = document.getElementById("nobita");
+        element.style.left = parseInt(element.style.left) - 20 + "px";
+    }
+
+    function rightArrowPress() {
+        let element = document.getElementById("nobita");
+        element.style.left = parseInt(element.style.left) + 20 + "px";
+    }
+
+    function moveSelecttion(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                leftArrowPress();
+                break;
+            case 39:
+                rightArrowPress();
+                break;
+            case 38:
+                upArrowPress();
+                break;
+            case 40:
+                downArrowPress();
+                break;
+
+        }
+    }
+
+    function docReady() {
+        window.addEventListener('keydown', moveSelecttion);
+    }
+</script>
+</body>
+</html>

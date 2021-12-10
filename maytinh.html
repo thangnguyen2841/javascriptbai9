@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MAY TINH DON GIAN</title>
+</head>
+<body>
+<input type="text" id=" manhinh"><br>
+<div id="dulieu">
+<button value="1" onclick="nhapDulieu(1)">1</button>
+<button  value="2" onclick="nhapDulieu(2)">2</button>
+<button  value="3" onclick="nhapDulieu(3)">3</button>
+<button  value="+" onclick="nhapDulieu(4)">+</button>
+<button  value="4" onclick="nhapDulieu(5)">4</button>
+<button  value="5" onclick="nhapDulieu(6)">5</button>
+<button  value="6" onclick="nhapDulieu(7)">6</button>
+<button  value="-" onclick="nhapDulieu('-')">-</button>
+<button  value="7" onclick="nhapDulieu(7)">7</button>
+<button  value="8" onclick="nhapDulieu(8)">8</button>
+<button  value="9" onclick="nhapDulieu(9)">9</button>
+<button  value="*" onclick="nhapDulieu('*')">*</button>
+    <button  value="0" onclick="nhapDulieu(0)">0</button>
+</div>
+<button  value="c">C</button>
+
+<button  value="=" onclick="tinhToan()">=</button>
+<button id= value="/" onclick="nhapDulieu()">/</button>
+<script>
+    function nhapDulieu(so) {
+        let dulieu = parseInt(document.getElementById("dulieu").value);
+        switch (so) {
+            case 1 :
+                 document.getElementById(" manhinh").value = 1
+                break;
+                 case 2 :
+                     document.getElementById(" manhinh").value = 2
+                    break;
+
+            }
+
+    }
+</script>
+</body>
+</html>
